@@ -1,0 +1,115 @@
+/* table of contents -----------------------------
+
+------------------------------------------------ */
+//固定ナビ
+.fixedBtns {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+
+    &_item {
+        a {
+            justify-content: center;
+            align-items: center;
+            height: 100%;
+        }
+
+        &:first-of-type {
+            a {
+                background-color: $lime1;
+                color: $black1;
+            }
+        }
+
+        &:last-of-type {
+            a {
+                background-color: $purple2;
+                color: $white1;
+            }
+        }
+    }
+
+    @include pc {
+        justify-content: space-between;
+        width: 100vw;
+        padding: 0 $wide*2;
+        bottom: $wide*2;
+
+        a {
+            line-height: 1.2;
+            padding: $wide;
+            border-radius: 10px;
+            box-sizing: border-box;
+            border: 2px solid transparent;
+            font-size: 1.4rem;
+
+            .fa-file-alt {
+                font-size: 30px;
+                margin-right: 8px;
+            }
+
+            .fa-book-open {
+                font-size: 26px;
+                margin-right: 8px;
+            }
+        }
+        &_item {
+            &:first-of-type {
+                a {
+                    &:hover {
+                        border: 2px solid $lime1;
+                        background-color: $white1;
+                    }
+                }
+            }
+
+            &:last-of-type {
+                a {
+                    &:hover {
+                        border: 2px solid $purple2;
+                        background-color: $white1;
+                        color: $purple2;
+                    }
+                }
+            }
+        }
+    }
+
+    @include sp {
+        z-index: 20;
+        width: 100%;
+        height: $wide*6;
+
+        &_item {
+            width: 50%;
+
+            a {
+                font-size: 3.2vw;
+                letter-spacing: -0.8px;
+                line-height: 1.2;
+            }
+
+            &:first-of-type {
+                a {
+                    letter-spacing: -1px;
+
+                    .fa-file-alt {
+                        font-size: 7vw;
+                        padding-right: 8px;
+                    }
+                }
+            }
+
+            &:last-of-type {
+                a {
+                    padding: $moderate;
+
+                    .fa-book-open {
+                        font-size: 6vw;
+                        padding-right: 8px;
+                    }
+                }
+            }
+        }
+    }
+}

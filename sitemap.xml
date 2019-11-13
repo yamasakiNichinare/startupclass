@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset
+      xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+      xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+      xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
+            http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
+<!-- created with Free Online Sitemap Generator www.xml-sitemaps.com -->
+
+
+<url>
+  <loc>https://startupclass.jp/</loc>
+  <lastmod>2019-04-19T04:07:49+00:00</lastmod>
+  <priority>1.00</priority>
+</url>
+<url>
+  <loc>https://startupclass.jp/contact.php</loc>
+  <lastmod>2019-04-23T08:13:26+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://startupclass.jp/mangalist.html</loc>
+  <lastmod>2019-04-19T04:08:32+00:00</lastmod>
+  <priority>0.80</priority>
+</url>
+<url>
+  <loc>https://startupclass.jp/privacy_policy.html</loc>
+  <lastmod>2019-04-19T04:08:41+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://startupclass.jp/manga1.html</loc>
+  <lastmod>2019-04-19T04:07:57+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://startupclass.jp/manga2.html</loc>
+  <lastmod>2019-04-19T04:08:04+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://startupclass.jp/manga3.html</loc>
+  <lastmod>2019-04-19T04:08:10+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+<url>
+  <loc>https://startupclass.jp/manga4.html</loc>
+  <lastmod>2019-04-19T04:08:22+00:00</lastmod>
+  <priority>0.64</priority>
+</url>
+
+
+</urlset>

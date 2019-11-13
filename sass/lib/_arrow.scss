@@ -1,0 +1,62 @@
+/* table of contents -----------------------------
+1.白右矢印（タイムライン用）
+2.アローアイコン
+------------------------------------------------ */
+
+//1.白右矢印（タイムライン用）
+.angle_right {
+    width: $moderate;
+    height: $moderate;
+    background-color: transparent;
+    z-index: 5;
+    border-top: 2px solid $white1;
+    border-right: 2px solid $white1;
+    transform: rotate(45deg);
+}
+
+//2.アローアイコン
+.arrow {
+    //矢印共通
+    @include positionabsolutex;
+    //黒矢印
+    &:before {
+        content: "";
+        position: absolute;
+        width: $moderate;
+        height: $moderate;
+        top: 4px;
+        background-color: transparent;
+        z-index: 5;
+    }
+    //白矢印
+    &_white {
+        &:before {
+            border-right: 2px solid $white1;
+            border-bottom: 2px solid $white1;
+        }
+    }
+    //右矢印
+    &_right {
+        &:before {
+            transform: rotate(-45deg);
+        }
+    }
+    //左矢印
+    &_left {
+        &:before {
+            transform: rotate(135deg);
+        }
+    }
+    //下矢印
+    &_bottom {
+        &:before {
+            transform: rotate(45deg) !important;
+        }
+    }
+    //上矢印
+    &_top {
+        &:before {
+            transform: rotate(-135deg) !important;
+        }
+    }
+}

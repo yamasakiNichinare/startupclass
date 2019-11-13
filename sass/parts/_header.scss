@@ -1,0 +1,126 @@
+/* table of contents -----------------------------
+1.ヘッダー
+------------------------------------------------ */
+.header {
+    background-color: $purple1;
+    position: relative;
+
+    &_top {
+        &_inner {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .schoollist {
+            display: flex;
+            flex-wrap: wrap;
+
+            &_item {
+                line-height: 1;
+
+                span {
+                    background-color: #6A1B9A;
+                    color: #fff;
+                }
+            }
+        }
+    }
+
+    .arrow {
+        @include positionabsolutex;
+        position: absolute;
+
+        a {
+            display: block;
+            color: $black1;
+        }
+    }
+
+    @include pc {
+        //トップ画面
+        &_top {
+            border-bottom: 4px solid #ddd;
+            padding: $wide*2;
+
+            .schoollist {
+                display: flex;
+
+                &_item {
+                    margin: 2px;
+                    line-height: 1;
+
+                    span {
+                        border-radius: 4px;
+                        font-size: $normal_rem;
+                        padding: 4px 6px;
+                    }
+                }
+            }
+        }
+        //下層画面
+        &_inner {
+            padding: $wide*3;
+
+            .arrow {
+                padding-left: $wide;
+                a {
+                    font-size: 2.6rem;
+                }
+            }
+
+            h1 {
+                font-size: 2.6rem;
+            }
+        }
+    }
+
+    @include sp {
+        &_top {
+            border-bottom: 1px solid #ddd;
+            padding: 6px;
+
+            &_inner {
+                .logo {
+                    img {
+                        width: 170px;
+                    }
+                }
+
+                .schoollist {
+                    display: flex;
+                    flex-wrap: wrap;
+                    width: 156px;
+
+                    &_item {
+                        margin: 2px;
+                        line-height: 1;
+
+                        span {
+                            border-radius: 2px;
+                            background-color: #6A1B9A;
+                            color: #fff;
+                            font-size: 1rem;
+                            padding: 2px 4px;
+                        }
+                    }
+                }
+            }
+        }
+
+        &_inner {
+            padding: $wide;
+
+            .arrow {
+                padding-left: $wide;
+                a {
+                    font-size: 2rem;
+                }
+            }
+
+            h1 {
+                font-size: 2rem;
+            }
+        }
+    }
+}

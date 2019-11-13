@@ -1,0 +1,43 @@
+/* table of contents -----------------------------
+1.テキスト
+------------------------------------------------ */
+//1.テキスト
+.text {
+
+    //明朝体
+    &_mincho {
+        font-family: "Yu Mincho", "YuMincho";
+    }
+
+    //太文字
+    &_bold {
+        font-weight: bold;
+    }
+
+    //テキスト中央
+    &_center {
+        text-align: center;
+    }
+
+    //赤文字
+    &_red {
+        color: $red1;
+    }
+}
+
+//2.画像
+img {
+    width: 100%;
+    vertical-align: top;
+}
+
+//3.正円
+.circle {
+    border-radius: 50%;
+}
+
+//4.マーカー
+.marker {
+    background: linear-gradient(transparent 60%, $yellow1 60%);
+    border-radius: 2px;
+}

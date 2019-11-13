@@ -1,0 +1,386 @@
+/* table of contents -----------------------------
+お問い合わせ
+1.共通
+2.PC版
+3.SP版
+------------------------------------------------ */
+//完了画面用
+.textComp {
+    justify-content: center;
+    align-items: center;
+
+    @include pc {
+        height: calc(100vh - 453px);
+    }
+
+    @include sp {
+        height: calc(100vh - 420px);
+    }
+}
+.theList {
+    @include pc {
+        margin-top: $wide*2;
+    }
+
+    @include sp {
+        margin-top: $wide*2;
+        p {
+            margin-bottom: -10px;
+        }
+    }
+}
+.submitBtn {
+    + .formText {
+        @include pc {
+            margin-top: $wide*5;
+        }
+
+        @include sp {
+            margin-top: $wide*3;
+        }
+    }
+}
+.formText {
+    @include pc {
+        margin-bottom: $wide*2;
+        font-size: $large_rem;
+        text-indent: -8px;
+        margin-left: 10px;
+
+        .fa-external-link-alt {
+            padding-left: 10px;
+        }
+
+
+    }
+
+    @include sp {
+        padding: 0 0 $wide*2 ;
+        text-indent: -6px;
+        margin-left: 10px;
+        font-size: 3.3vw;
+        span {
+            text-indent: -8px;
+            margin-left: 8px;
+            display: block;
+        }
+
+        .fa-external-link-alt {
+            padding-left: 6px;
+        }
+    }
+
+    a {
+        color: $blue1;
+        text-decoration: underline;
+
+        @include pc {
+            &:hover {
+                text-decoration: none;
+            }
+        }
+    }
+}
+
+.formArea {
+    //1.共通
+    input,textarea,select {
+        border: 1px solid $gray1;
+        -webkit-text-size-adjust: 100%;
+        font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+        color: $black1;
+        -webkit-appearance: none;
+        appearance: none;
+
+        &:focus {
+            outline: 0;
+            border-color: $purple3;
+        }
+    }
+
+    .btns {
+        input {
+            margin: 0;
+        }
+
+        .btn_gray {
+            background-color: $gray1;
+            color: $black1;
+        }
+    }
+
+    ::placeholder {
+        color: $gray1;
+    }
+
+    .red {
+        color: $red1;
+        font-weight: normal;
+    }
+
+    dd {
+        &.h_item {
+            align-items: center;
+        }
+    }
+
+    textarea {
+        resize: none;
+    }
+
+    .h_itemName {
+        justify-content: space-between;
+
+        input {
+            width: 49%;
+        }
+    }
+
+    .radio02 {
+        &-input {
+            display: none;
+
+            + label {
+                padding-left: $wide*2;
+                position: relative;
+                margin-right: $wide*2;
+
+                &:before {
+                    content: "";
+                    display: block;
+                    position: absolute;
+                    top: 2px;
+                    left: 0;
+                    width: 15px;
+                    height: 15px;
+                    border: 1px solid $gray1;
+                    border-radius: 50%;
+                }
+            }
+
+            &:checked {
+                & + label {
+                    &:after {
+                        content: "";
+                        display: block;
+                        position: absolute;
+                        top: 5px;
+                        left: 3px;
+                        width: 11px;
+                        height: 11px;
+                        background: $lime1;
+                        border-radius: 50%;
+                    }
+                }
+            }
+        }
+    }
+
+    //必須
+    .must {
+        background-color: $lime1;
+        color: $white1;
+    }
+
+    //ボタン
+    .submitBtn {
+        background-color: $purple3;
+        color: $white1;
+        border: none;
+    }
+
+    //2.PC版
+    @include pc {
+        padding: $wide*4 $wide*6 $wide*6;
+        font-size: 2.2rem;
+
+        input,textarea,select {
+            border-radius: 6px;
+            width: 100%;
+            font-size: $large_rem;
+            padding: $wide*1.4;
+        }
+
+        .radio02 {
+            &-input {
+                + label {
+                    padding-left: $wide*2.4;
+                    margin-right: $wide*2.4;
+
+                    &:before {
+                        top: 5px;
+                    }
+                }
+
+                &:checked {
+                    & + label {
+                        &:after {
+                            top: 8px;
+                        }
+                    }
+                }
+            }
+        }
+
+        select {
+            background: url('../images/arrow.png') no-repeat right $wide*1.4 center;
+            background-size: $wide;
+        }
+
+        .must {
+            padding: 4px;
+            border-radius: 4px;
+            font-size: $large_rem;
+            margin-left: 8px;
+        }
+
+        dt {
+            margin-bottom: 8px;
+
+            .red {
+                font-size: $normal_rem;
+            }
+        }
+
+        dd {
+            margin-bottom: $wide*4;
+
+            &.addInput {
+                input {
+                    &:last-of-type {
+                        margin-top: $wide*2;
+                    }
+                }
+            }
+
+            &.h_item {
+                p {
+                    padding: 0 16px;
+
+                    &:last-of-type {
+                        padding: 0 0 0 16px;
+                    }
+                }
+            }
+
+            &.twoSelects {
+                select {
+                    &:last-of-type {
+                        margin-top: $wide*2;
+                    }
+                }
+            }
+        }
+
+        .submitBtn {
+            margin-top: $wide*3;
+            box-shadow: 0 $wide 0 $purple2;
+            font-size: $huge_rem;
+            height: $wide*6;
+            cursor: pointer;
+            transition: all 0.3s ease-in-out;
+
+            &:hover {
+                color: $purple2;
+                background-color: $white1;
+                border: 2px solid $purple2;
+            }
+        }
+
+        .btns {
+            justify-content: space-between;
+
+            .btn_gray {
+                font-size: $small_rem;
+                width: 36%;
+            }
+
+            .submitBtn {
+                width: 60%;
+            }
+        }
+    }
+
+    //3.SP版
+    @include sp {
+        padding: $wide*3 $wide*2;
+        font-size: $large_rem;
+
+        input,textarea,select {
+            border-radius: 4px;
+            width: 100%;
+            font-size: $large_rem;
+            padding: $wide;
+        }
+
+        select {
+            background: url('../images/arrow.png') no-repeat right $wide*1.4 center;
+            background-size: $wide;
+        }
+
+        .must {
+            padding: 2px;
+            border-radius: 2px;
+            font-size: $small_rem;
+            margin-left: 4px;
+        }
+
+        dt {
+            margin-bottom: 4px;
+
+            .red {
+                font-size: $small_rem;
+            }
+        }
+
+        dd {
+            margin-bottom: $wide*2;
+
+            &.addInput {
+                input {
+                    &:last-of-type {
+                        margin-top: $wide;
+                    }
+                }
+            }
+
+            &.h_item {
+                p {
+                    padding: 0 $moderate;
+
+                    &:last-of-type {
+                        padding: 0 0 0 $moderate;
+                    }
+                }
+            }
+
+            &.twoSelects {
+                select {
+                    &:last-of-type {
+                        margin-top: $wide;
+                    }
+                }
+            }
+        }
+
+        .submitBtn {
+            margin-top: $wide*2;
+            box-shadow: 0 5px 0 $purple2;
+            font-size: $huge_rem;
+            height: $wide*5;
+        }
+
+        .btns {
+            justify-content: space-between;
+
+            .btn_gray {
+                font-size: $small_rem;
+                width: 36%;
+            }
+
+            .submitBtn {
+                width: 60%;
+            }
+        }
+    }
+}

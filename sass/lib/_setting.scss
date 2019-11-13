@@ -1,0 +1,110 @@
+/* table of contents -----------------------------
+1.背景画像パス指定
+2.フォント指定
+3.大枠
+4.余白リセット
+5.dd調整
+6.box-sizing指定
+7.PC、SPでの表示・非表示の切り替え
+------------------------------------------------ */
+
+//1.背景画像パス指定
+$img_path:'../images/';
+//2.フォント指定
+html {
+    font-size: 62.5%;
+}
+
+body {
+    -webkit-text-size-adjust: 100%;
+    font-family: -apple-system, BlinkMacSystemFont, "Helvetica Neue", YuGothic, "ヒラギノ角ゴ ProN W3", Hiragino Kaku Gothic ProN, Arial, "メイリオ", Meiryo, sans-serif;
+    color: $black1;
+}
+
+.mincho {
+    font-family: "Sawarabi Mincho";
+}
+
+@include pc {
+    body {
+        font-size: $huge_rem;
+        line-height: 1.8;
+    }
+}
+
+@include sp {
+    body {
+        font-size: $normal_rem;
+        line-height: 1.6;
+    }
+}
+
+//3.大枠
+@include pc {
+    body {
+        background-color: $white2;
+    }
+    .wrapper {
+        width: $wide*98;
+        margin: 0 auto;
+        background-color: $white1;
+    }
+}
+
+@include sp {
+    .wrapper {
+        padding-bottom: $wide*6;
+    }
+}
+
+//4.余白リセット
+ul,
+ol,
+p,
+figure,
+h1,
+h2,
+h3,
+h4,
+dl {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+//5.dd調整
+dd {
+    margin: 0;
+}
+
+//6.box-sizing指定
+* {
+    box-sizing: border-box;
+}
+
+//7.PC、SPでの表示・非表示の切り替え
+@include pc {
+    .SP {
+        display: none;
+    }
+}
+
+@include sp {
+    .PC {
+        display: none;
+    }
+}
+
+//8.横並び
+.h_item {
+    display: flex;
+}
+
+//9.リンク
+a {
+    text-decoration: none;
+
+    @include pc {
+        transition: all 0.3s ease-in-out;
+    }
+}

@@ -1,0 +1,18 @@
+//ライブラリ読み込み
+@import "compass";
+@import "lib/normalize";
+@import "lib/colors";
+@import "lib/mixin";
+@import "lib/dimensions";
+@import "lib/setting";
+@import "lib/arrow";
+@import "lib/btn";
+//PC・SP版読み込み
+@import "parts/common";
+@import "parts/header";
+@import "parts/footer";
+@import "parts/page";
+@import "parts/top";
+@import "parts/contact";
+@import "parts/animation";
+@import "parts/fixednavi";

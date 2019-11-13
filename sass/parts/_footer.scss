@@ -1,0 +1,55 @@
+/* table of contents -----------------------------
+1.フッター
+------------------------------------------------ */
+//1.フッター
+.footer {
+    background-color: $purple1;
+
+    small {
+        display: block;
+    }
+
+    @include pc {
+        &_inner {
+            padding: $wide*4 $wide*4 $wide*2;
+
+            .logo {
+                margin-bottom: $wide*3;
+
+                img {
+                    width: 40%;
+                }
+            }
+
+            p {
+                margin-bottom: $wide*2;
+            }
+
+            small {
+                font-size: $normal_rem;
+            }
+        }
+    }
+
+    @include sp {
+        &_inner {
+            padding: $wide*2;
+
+            .logo {
+                margin-bottom: $wide;
+
+                img {
+                    width: 78%;
+                }
+            }
+
+            p {
+                margin-bottom: $wide;
+            }
+
+            small {
+                font-size: $tiny_rem;
+            }
+        }
+    }
+}
